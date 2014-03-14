@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="index :: head">    
+</head>
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Quotes</h3>
+              <ul class="nav masthead-nav">
+                <li><a href="/">Home</a></li>
+                <li  class="active"><a href="list">List</a></li>                 
+                <li><a href="add">Add</a></li>               
+              </ul>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Quote list</h1>
+            <ul>
+				<li th:each="quote:${quotes}" th:text="${quote.text} ">Quote</li>
+			</ul>
+			
+          	<div class="inner">
+              <span th:if="${pagenumber &gt; 0 }"><a href="prev" th:href="@{list(page=${pagenumber})}" >Prev</a></span>          
+              <span>Page <span th:text="${pagenumber + 1}"></span> of <span th:text="${quotes.totalPages}"></span></span>
+              <span th:if="${pagenumber &lt; max -1}"><a href="next" th:href="@{list(page=${pagenumber+2})}" >Next</a></span>
+             </div>
+            
+            
+            </div>
+
+          <div th:replace="index :: footer" ></div>
+
+        </div>
+
+      </div>
+
+    </div>   
+  </body>
+</html>
