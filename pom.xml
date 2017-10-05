@@ -15,7 +15,7 @@
     </parent>
     <scm>
     <connection>scm:git:git@github.com:mennink/quotes.git</connection>
-    <developerConnection>scm:git:git@github.com:mennink/quotesgit</developerConnection>
+    <developerConnection>scm:git:git@github.com:mennink/quotes.git</developerConnection>
     <url>https://github.com/mennink/quotes/tree/master/</url>
   	</scm>
 
