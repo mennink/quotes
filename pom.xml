@@ -5,7 +5,7 @@
 	<groupId>quotes</groupId>
 	<artifactId>quotes</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0</version>
+	<version>1.0-SNAPSHOT</version>
 	<name>quotes</name>
 	
 	<parent>
@@ -13,6 +13,12 @@
  		<artifactId>spring-boot-starter-parent</artifactId>
  		<version>1.0.0.RC4</version> 		
     </parent>
+    <scm>
+    <connection>scm:git:git@github.com:mennink/quotes.git</connection>
+    <developerConnection>scm:git:git@github.com:mennink/quotesgit</developerConnection>
+    <url>https://github.com/mennink/quotes/tree/master/</url>
+  	</scm>
+
    	<repositories>
 		<repository>
             <id>spring-milestone</id>
